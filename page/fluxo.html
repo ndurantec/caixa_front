@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href="../asset/style/fluxo.css">
+</head>
+<body>
+	<h1>Conta</h1>
+	<form id="fluxo_colegio">
+		<label for="fluxo_conta">Conta:</label>
+		<select name="region">
+			<option value="">Todos As Contas</option>
+		</select><br>
+		<br>
+		
+        <label for="data_fluxo">Data:</label>
+		<input type="date" id="data_fluxo"><br>
+		<br>
+
+        <label for="operacao_fluxo">Operação:</label>
+		<select name="region">
+			<option value="">Todos As Operações</option>
+		</select><br><br>
+        
+		<label for="valor_fluxo">Valor:</label>
+		<input type="number" id="valor_fluxo"><br>
+		<br>
+
+		<label for="descricao_fluxo">Descrição:</label>
+		<input type="text" id="descricao_fluxo"><br>
+		<br>
+		<button type="submit" id="submit-btn">Cadastrar</button>		
+		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
+	</form>	
+	<script src="../script/fluxo.js"></script>
+</body>
+</html>
