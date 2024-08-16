@@ -1,28 +1,17 @@
-var meuFormulario = document.getElementById("cadastro_professor");
+var meuFormulario = document.getElementById("conta_colegio");
 meuFormulario.addEventListener("submit", function(event) {
   event.preventDefault();
-  cadastrar_professor();
+  cadastrar_conta();
 });
 
-function capturarPrimeiroNumeroInteiro() {
-  const primeiro_numero_inteiro = Number(document.getElementById("nome_prof").value);
-  return primeiro_numero_inteiro;
+function capturarNomeConta() {
+  const nome_conta = Number(document.getElementById("nome_conta").value);
+  return nome_conta;
 }
 
-function capturarSegundoNumeroInteiro() {
- const segundo_numero_inteiro = Number(document.getElementById("segundo_numero_inteiro").value); 
- return segundo_numero_inteiro;
-}
-
-
-function somar() {
-  let primeiro_numero_inteiro = capturarPrimeiroNumeroInteiro();
-  let segundo_numero_inteiro = capturarSegundoNumeroInteiro();
-  let resultado_soma = primeiro_numero_inteiro + segundo_numero_inteiro;
-  imprimirResultadoNaTela(resultado_soma);
+function capturarDescricaoConta() {
+ const descricao_conta = Number(document.getElementById("descricao_conta").value); 
+ return descricao_conta;
 }
 
 
-function imprimirResultadoNaTela(resultado_soma) {
-  document.getElementById("resultado_soma").value = resultado_soma;
-}
