@@ -1,28 +1,25 @@
-var meuFormulario = document.getElementById("cadastro_professor");
+var meuFormulario = document.getElementById("fluxo_colegio");
 meuFormulario.addEventListener("submit", function(event) {
   event.preventDefault();
-  cadastrar_professor();
+  cadastrar_fluxo();
 });
 
-function capturarPrimeiroNumeroInteiro() {
-  const primeiro_numero_inteiro = Number(document.getElementById("nome_prof").value);
-  return primeiro_numero_inteiro;
+function capturarDataFluxo() {
+  const data_fluxo = Number(document.getElementById("data_fluxo").value);
+  return data_fluxo;
 }
 
-function capturarSegundoNumeroInteiro() {
- const segundo_numero_inteiro = Number(document.getElementById("segundo_numero_inteiro").value); 
- return segundo_numero_inteiro;
+function capturarOperacaoFluxo() {
+  const operacao_fluxo = Number(document.getElementById("operacao_fluxo").value);
+  return operacao_fluxo;
 }
 
-
-function somar() {
-  let primeiro_numero_inteiro = capturarPrimeiroNumeroInteiro();
-  let segundo_numero_inteiro = capturarSegundoNumeroInteiro();
-  let resultado_soma = primeiro_numero_inteiro + segundo_numero_inteiro;
-  imprimirResultadoNaTela(resultado_soma);
+function capturarValorFluxo() {
+  const valor_fluxo = Number(document.getElementById("valor_fluxo").value);
+  return valor_fluxo;
 }
 
-
-function imprimirResultadoNaTela(resultado_soma) {
-  document.getElementById("resultado_soma").value = resultado_soma;
+function capturarDescricaoFluxo() {
+  const descricao_fluxo = Number(document.getElementById("descricao_fluxo").value);
+  return descricao_fluxo;
 }
