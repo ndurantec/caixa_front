@@ -42,7 +42,7 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button[type="submit"] {
+button[type="button"] {
   display: block;
   width: 100%;
   padding: 10px;
@@ -54,6 +54,6 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
   background-color: #3e8e41;
 }
