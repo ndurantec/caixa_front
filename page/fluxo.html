@@ -31,7 +31,12 @@
 		<label for="descricao_fluxo">Descrição:</label>
 		<input type="text" id="descricao_fluxo"><br>
 		<br>
-		<button type="button" id="submit-btn" onclick="salvar()">Cadastrar</button>		
+		<div class="bnt-class">
+			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>
+			<button type="button" id="submit-btn-consultar" onclick="consultar()">Consultar</button>
+			<button type="button" id="submit-btn-alterar" onclick="alterar()">Alterar</button>
+			<button type="button" id="submit-btn-apagar" onclick="apagar()">Apagar</button>	
+		</div>	
 	</form>	
 	<script src="../script/fluxo.js"></script>
 </body>
