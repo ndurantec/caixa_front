@@ -1,9 +1,12 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
+    background-image: url('../image/fundoparana.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #000000;
+    margin: 0
+    
   }
   
   /* Estilos do formulário */
