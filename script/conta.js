@@ -10,7 +10,7 @@ function salvar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('localhost:8080/fluxo/inserir' ,{
+  fetch(' http://localhost:8080/conta/insert' ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -59,9 +59,9 @@ function consultar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('localhost:8080/fluxo/inserir' ,{
+  fetch(' http://localhost:8080/conta/1' ,{
 
-    method: "POST",
+    method: "GET",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
@@ -108,9 +108,9 @@ function alterar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('localhost:8080/fluxo/inserir' ,{
+  fetch('http://localhost:8080/conta/2' ,{
 
-    method: "POST",
+    method: "PUT",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
@@ -157,9 +157,9 @@ function apagar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('localhost:8080/fluxo/inserir' ,{
+  fetch(' http://localhost:8080/conta/3' ,{
 
-    method: "POST",
+    method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
