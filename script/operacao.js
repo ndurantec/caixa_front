@@ -177,3 +177,15 @@ function apagar() {
    
 
 }
+
+//botao de voltar 
+document.addEventListener('DOMContentLoaded', function() {
+  const link = document.getElementById('contabt');
+
+  // Define o destino do link dinamicamente
+  link.href = 'home.html'; // Substitua pelo URL da página desejada
+});
+
+function goBack() {
+  window.history.back();
+}
