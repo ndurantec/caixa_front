@@ -4,7 +4,7 @@ function salvar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/operacao/insert' ,{
 
@@ -62,7 +62,7 @@ function consultar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(' http://localhost:8080/operacao/findAll' ,{
 
@@ -110,7 +110,7 @@ function alterar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(`http://localhost:8080/operacao/${ID}` ,{
 
@@ -155,7 +155,7 @@ function apagar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/operacao/1' ,{
 

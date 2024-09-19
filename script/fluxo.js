@@ -17,7 +17,7 @@ function salvar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/insert' ,{
 
@@ -68,7 +68,7 @@ function consultar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -119,7 +119,7 @@ function alterar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -170,7 +170,7 @@ function apagar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -215,7 +215,7 @@ function carregarComboConta() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://127.0.0.1:8080/conta/findAll' ,{
 
@@ -250,7 +250,7 @@ function carregarComboOperacao() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://127.0.0.1:8080/operacao/findAll' ,{
 

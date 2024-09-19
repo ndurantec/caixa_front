@@ -8,7 +8,7 @@ function salvar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(' http://localhost:8080/conta/insert' ,{
 
@@ -69,7 +69,7 @@ function consultar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(`http://localhost:8080/conta/` ,{
 
@@ -127,7 +127,7 @@ function alterar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(`http://localhost:8080/conta/${ID}` ,{
 
@@ -176,7 +176,7 @@ function apagar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500');
 
   fetch(`http://localhost:8080/conta/${ID}` ,{
 
