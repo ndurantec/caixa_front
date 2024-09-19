@@ -27,8 +27,6 @@ function salvar() {
 
     if(response.ok) {
 
-      return response.json(); //transforma a resposta em JSON
-
       //Esta linha imprime a mensagem no concole
      
       console.log('Foi no servidor e voltou');
@@ -199,7 +197,7 @@ function apagar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
