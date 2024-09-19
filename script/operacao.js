@@ -51,7 +51,7 @@ function consultar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch(' http://localhost:8080/operacao/' ,{
+  fetch(' http://localhost:8080/operacao/findAll' ,{
 
     method: "GET",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -96,7 +96,7 @@ function alterar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('http://localhost:8080/operacao/' ,{
+  fetch('http://localhost:8080/operacao/1' ,{
 
     method: "PUT",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -141,7 +141,7 @@ function apagar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
 
-  fetch('http://localhost:8080/operacao/' ,{
+  fetch('http://localhost:8080/operacao/1' ,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
