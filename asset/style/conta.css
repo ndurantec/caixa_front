@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    color: #000000;
-    background-image: url('../image/fundoparana.jpg');
+    color: rgb(146, 146, 146);
+    background-image: url('../image/fundocastelo.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0;

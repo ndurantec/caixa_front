@@ -1,5 +1,5 @@
 body {
-    background-image: url('../image/fundoparana.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../image/fundocastelo.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background-color: #333;
+    background: linear-gradient( #00428d,#047e00);
     color: white;
     position: relative; /* Para o uso de flexbox e centralização */
 }
@@ -21,7 +21,7 @@ body {
 }
 
 .logo img {
-    height: 70px; /* Ajuste conforme necessário */
+    height: 85px; /* Ajuste conforme necessário */
 }
 
 .nav {
@@ -49,6 +49,6 @@ body {
 }
 
 .nav ul li a:hover {
-    color: rgb(0, 136, 18); /* Cor dos links quando o mouse está sobre eles */
+    color: rgb(0, 201, 27); /* Cor dos links quando o mouse está sobre eles */
     text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
 }
