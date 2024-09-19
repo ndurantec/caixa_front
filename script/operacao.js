@@ -72,7 +72,7 @@ function consultar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      //window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -117,7 +117,7 @@ function alterar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      //window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -162,7 +162,7 @@ function apagar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+     // window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
