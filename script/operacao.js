@@ -20,21 +20,11 @@ function salvar() {
 
     //Aqui inicia função then
   }).then(response => {
-
     if(response.ok) {
-
       return response.json(); //transforma a resposta em JSON
-
-      //Esta linha imprime a mensagem no concole
-     
-      console.log('Foi no servidor e voltou');
-
-      //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
-
       //Esta linha imprime a mensagem de erro
       throw new Error('Erro ao tentar salvar');
     }
@@ -48,6 +38,10 @@ function salvar() {
     //se quiser armazenar o ID no localStorage
     localStorage.setItem('id_operacao', id_operacao);
 
+      console.log('Foi no servidor e voltou');
+
+      //Esta linha carrega a página sucesso
+      window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado
