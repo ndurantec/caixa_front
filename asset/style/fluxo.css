@@ -2,7 +2,8 @@
 body {
   font-family: Arial, sans-serif;
   color: #000000;
-  background-image: url('../image/fundocastelo.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-image: url('../image/logo.png');
+  background-color: #edf9ff;
   background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
   margin: 0;

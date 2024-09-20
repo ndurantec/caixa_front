@@ -1,5 +1,6 @@
 body {
-    background-image: url('../image/fundocastelo.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../image/logo.png');
+    background-color: #edf9ff;
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
@@ -10,7 +11,7 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background: linear-gradient( #00428d,#047e00);
+    background: linear-gradient(#00428d,#047e00,#edf9ff);
     color: white;
     position: relative; /* Para o uso de flexbox e centralização */
 }

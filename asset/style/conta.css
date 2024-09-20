@@ -2,7 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     color: rgb(0, 0, 0);
-    background-image: url('../image/fundocastelo.jpg');
+    background-image: url('../image/logo.png');
+    background-color: #edf9ff;
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0;
