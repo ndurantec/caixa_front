@@ -4,7 +4,7 @@ function salvar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/operacao/insert' ,{
 
@@ -20,21 +20,11 @@ function salvar() {
 
     //Aqui inicia função then
   }).then(response => {
-
     if(response.ok) {
-
       return response.json(); //transforma a resposta em JSON
-
-      //Esta linha imprime a mensagem no concole
-     
-      console.log('Foi no servidor e voltou');
-
-      //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
-
       //Esta linha imprime a mensagem de erro
       throw new Error('Erro ao tentar salvar');
     }
@@ -48,6 +38,10 @@ function salvar() {
     //se quiser armazenar o ID no localStorage
     localStorage.setItem('id_operacao', id_operacao);
 
+      console.log('Foi no servidor e voltou');
+
+      //Esta linha carrega a página sucesso
+      window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado
@@ -62,7 +56,7 @@ function consultar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(' http://localhost:8080/operacao/findAll' ,{
 
@@ -85,7 +79,7 @@ function consultar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso2.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -110,7 +104,7 @@ function alterar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch(`http://localhost:8080/operacao/${ID}` ,{
 
@@ -133,7 +127,7 @@ function alterar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso3.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -150,14 +144,17 @@ function alterar() {
 }
 
 function apagar() {
+ //se quiser armazenar o ID no localStorage
+ const ID = localStorage.getItem('id_operacao');
+
   const operacao = document.getElementById('nome_operacao').value;
   console.log(nome_operacao)
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
-  fetch('http://localhost:8080/operacao/1' ,{
+  fetch(`http://localhost:8080/operacao/${ID}`,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -178,7 +175,7 @@ function apagar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso4.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');

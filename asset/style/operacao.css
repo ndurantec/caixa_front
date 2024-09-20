@@ -1,8 +1,10 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../image/fundocastelo.jpg');
-    background-size: 100%;
+    background-image: url('../image/logo.png');
+    background-color: #edf9ff;
+    background-size: 80%;
+    background-position: center;
     background-repeat: no-repeat;
     color: #000000;
     margin: 0

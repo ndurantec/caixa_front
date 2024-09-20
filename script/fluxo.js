@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   carregarComboConta();
   carregarComboOperacao();
+  localStorage.clear();
 });
 
 function salvar() {
@@ -17,7 +18,7 @@ function salvar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/insert' ,{
 
@@ -68,7 +69,7 @@ function consultar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -91,7 +92,7 @@ function consultar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso2.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -119,7 +120,7 @@ function alterar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -142,7 +143,7 @@ function alterar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso3.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -170,7 +171,7 @@ function apagar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://localhost:8080/fluxo/inserir' ,{
 
@@ -193,7 +194,7 @@ function apagar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso4.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -215,7 +216,7 @@ function carregarComboConta() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://127.0.0.1:8080/conta/findAll' ,{
 
@@ -250,7 +251,7 @@ function carregarComboOperacao() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://127.0.0.1:8080/operacao/findAll' ,{
 
