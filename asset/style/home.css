@@ -2,7 +2,7 @@ body {
     background-image: url('../image/logo.png');
     background-color: #edf9ff;
     background-size: 80%;
-    background-position: 100%;
+    background-position: center;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
 }
