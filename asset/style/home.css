@@ -1,7 +1,8 @@
 body {
     background-image: url('../image/logo.png');
     background-color: #edf9ff;
-    background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
+    background-size: 80%;
+    background-position: 100%;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
 }

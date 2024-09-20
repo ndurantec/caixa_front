@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   carregarComboConta();
   carregarComboOperacao();
+  localStorage.clear();
 });
 
 function salvar() {
