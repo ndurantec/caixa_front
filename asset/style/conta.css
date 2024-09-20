@@ -66,7 +66,7 @@ body {
   .back-button {
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #0fb600;
+    background-color: #0a6602;
     color: white;
     border: none;
     border-radius: 5px;
@@ -75,5 +75,5 @@ body {
 }
 
 .back-button:hover {
-    background-color: #0056b3;
+    background-color: #003f83;
 }
