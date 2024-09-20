@@ -144,6 +144,9 @@ function alterar() {
 }
 
 function apagar() {
+ //se quiser armazenar o ID no localStorage
+ const ID = localStorage.getItem('id_operacao');
+
   const operacao = document.getElementById('nome_operacao').value;
   console.log(nome_operacao)
 
@@ -151,7 +154,7 @@ function apagar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
-  fetch('http://localhost:8080/operacao/1' ,{
+  fetch(`http://localhost:8080/operacao/${ID}`,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada

@@ -4,7 +4,8 @@ body {
     color: rgb(0, 0, 0);
     background-image: url('../image/logo.png');
     background-color: #edf9ff;
-    background-size: 100%;
+    background-size: 95%;
+    background-position: center;
     background-repeat: no-repeat;
     margin: 0;
   }

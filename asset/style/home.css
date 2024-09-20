@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background: linear-gradient(#00428d,#047e00,#edf9ff);
+    background: linear-gradient(#00428d,#047e00);
     color: white;
     position: relative; /* Para o uso de flexbox e centralização */
 }
