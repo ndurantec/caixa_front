@@ -1,8 +1,12 @@
 body {
-    background-image: url('../image/fundocastelo.jpg'); /* Substitua pelo caminho da sua imagem */
-    background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    margin: 0;
+    background-image: url('../image/logo.png');
+    background-color: #edf9ff;
+    background-position: center center;       /* Centraliza horizontal e verticalmente */
+    background-repeat: no-repeat;             /* Evita repetição da imagem */
+    background-size: 80%;                   /* Faz com que a imagem cubra todo o fundo */
+    background-attachment: fixed;             /* Mantém a imagem fixa enquanto rola a página */
+    height: 100vh;                            /* Garante que o body tenha a altura da viewport */
+    margin: 0;                                /* Remove margens do body */
 }
 
 .header {
@@ -10,7 +14,7 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background: linear-gradient( #00428d,#047e00);
+    background: linear-gradient(#00428d,#047e00);
     color: white;
     position: relative; /* Para o uso de flexbox e centralização */
 }

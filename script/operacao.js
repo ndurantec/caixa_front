@@ -58,9 +58,9 @@ function consultar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
-  fetch(' http://localhost:8080/operacao/findAll' ,{
+  fetch('http://127.0.0.1:8080/operacao/findByNome' ,{
 
-    method: "GET",
+    method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
@@ -73,26 +73,26 @@ function consultar() {
     //Aqui inicia função then
   }).then(response => {
 
-    if(response.ok) {
-
-      //Esta linha imprime a mensagem no concole
-      console.log('Foi no servidor e voltou');
-
-      //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+    if (response.ok) {
+      return response.text(); // Usamos text() para lidar com retorno direto (não é JSON)
     } else {
-      //Esta linha imprime a mensagem no console
-      console.log('Aconteceu algo que não foi possivel salvar');
-
-      //Esta linha imprime a mensagem de erro
-      throw new Error('Erro ao tentar salvar');
+      console.error('Erro na resposta da API');
+      throw new Error('Erro ao tentar buscar a conta');
     }
-
   })
-  //Aqui será executado caso a then não seja chamado
-  .catch(error => console.error('Erro!:', error));
-   
+  .then(id_operacao => {
+    console.log("ID da conta recebida:", id_operacao); // Aqui o id é diretamente o retorno
 
+    if (id_operacao) {
+      localStorage.setItem('id_operacao', id_operacao);
+      alert("item achado com sucesso! agora é possivel deletar ou deletar a operacao selecionada ");
+    } else {
+      console.error("ID não encontrado na resposta");
+    }
+  })
+  .catch(error => {
+    console.error("Erro capturado no catch:", error);
+  });
 }
 
 function alterar() {
@@ -127,7 +127,7 @@ function alterar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso3.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -144,6 +144,9 @@ function alterar() {
 }
 
 function apagar() {
+ //se quiser armazenar o ID no localStorage
+ const ID = localStorage.getItem('id_operacao');
+
   const operacao = document.getElementById('nome_operacao').value;
   console.log(nome_operacao)
 
@@ -151,7 +154,7 @@ function apagar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
-  fetch('http://localhost:8080/operacao/1' ,{
+  fetch(`http://localhost:8080/operacao/${ID}`,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -172,7 +175,7 @@ function apagar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso4.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -198,4 +201,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function goBack() {
   window.history.back();
+  
+  localStorage.clear();
 }

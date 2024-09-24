@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Relatório de Fluxo</title>
+		<link rel="icon" href="../asset/image/logo.png" type="image/x-icon">
+		<link rel="stylesheet" href="../asset/style/relatorio.css">
+	</head>
+	<body>
+		<div class="back-button" id="contabt" onclick="goBack()">
+			&#8592; Voltar
+		</div>
+		<h1>Relatório de Fluxo</h1>
+	
+		<!-- Filtro de pesquisa -->
+		<form id="form-relatorio">
+			<label for="data_inicio">Data Início:</label>
+			<input type="date" id="data_inicio" name="data_inicio" required>
+	
+			<label for="data_fim">Data Fim:</label>
+			<input type="date" id="data_fim" name="data_fim" required>
+	
+			<label for="operacao">Operação:</label>
+			<select id="operacao" name="operacao" required>
+				<option value="">Selecione a operação</option>
+				<option value="entrada">Entrada</option>
+				<option value="saida">Saída</option>
+			</select>
+	
+			<button type="submit">Gerar Relatório</button>
+		</form>
+
+			<!-- Total de valores -->
+		<h3>Total: <span id="total">0</span></h3>
+
+		<!-- Tabela de resultados -->
+		<h2>Resultados:</h2>
+		<table id="tabela-relatorio" class="tabela-relatorio">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Operação</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody id="relatorio" class="relatorio">
+				<!-- Os registros serão adicionados dinamicamente aqui -->
+			</tbody>
+		</table>
+	
+		
+	
+		<script src="../script/relatorio.js">
+		</script>
+	
+	</body>
+</html>
