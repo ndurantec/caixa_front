@@ -39,21 +39,22 @@ body {
     margin-top: 50px;
   }
 
+  h3 {
+    color: red;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
   /* Estilo dos campos de texto */
+  input[type="text"],
   input[type="date"] {
     display: block;
-    width: 30%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
-
-  select{ 
-    width:200px; 
-    height:50px; 
-    float:left; 
-    position:relative; 
   }
   
   /* Botões */
@@ -174,19 +175,5 @@ body {
 
 .back-button:hover {
     background-color: #003f83;
-}
-
-h3 {
-  transition: color 0.5s;
-}
-.resultado1 {
-  color: green;
-}
-.resultado2 {
-  color: red;
-}
-
-.padrao {
-  color: black;
 }
   

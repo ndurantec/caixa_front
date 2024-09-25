@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    color: #000000;
-    background-image: url('../image/logo.png');
+  font-family: Arial, sans-serif;
+  color: #000000;
+  background-image: url('../image/logo.png');
     background-color: #edf9ff;
     background-position: center center;       /* Centraliza horizontal e verticalmente */
     background-repeat: no-repeat;             /* Evita repetição da imagem */
