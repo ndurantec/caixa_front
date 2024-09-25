@@ -13,7 +13,7 @@ document.getElementById('form-relatorio').addEventListener('submit', function(ev
     console.log(operacao);
 
     // Requisição para a API (ajustar URL conforme necessário)
-    fetch(`http://127.0.0.1:8080/fluxo/buscarPorPeriodo?dataInicio=${dataInicio}&dataFim=${dataFim}&operacao=${operacao}`)
+    fetch(`http://127.0.0.1:8080/fluxo/buscarPorPeriodo?data_inicio=${dataInicio}&data_fim=${dataFim}&operacao=${operacao}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na rede: ' + response.statusText);
