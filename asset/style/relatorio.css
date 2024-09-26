@@ -47,20 +47,14 @@ body {
   }
   
   /* Estilo dos campos de texto */
+  input[type="text"],
   input[type="date"] {
     display: block;
-    width: 30%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
-
-  select{ 
-    width:200px; 
-    height:50px; 
-    float:left; 
-    position:relative; 
   }
   
   /* Botões */
