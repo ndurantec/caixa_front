@@ -286,7 +286,7 @@ function carregarComboOperacao() {
 
 //botao de voltar 
 document.addEventListener('DOMContentLoaded', function() {
-  const link = document.getElementById('contabt');
+  const link = document.getElementById('fluxobt');
 
   // Define o destino do link dinamicamente
   link.href = 'home.html'; // Substitua pelo URL da página desejada

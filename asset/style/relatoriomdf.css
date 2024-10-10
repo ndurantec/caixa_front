@@ -1,59 +1,43 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
     padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center; /* Centraliza o texto dentro do header */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.filters {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Espaçamento entre os conjuntos de label e select */
+h1 {
+    text-align: center;
 }
 
-.filter-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px; /* Distância entre label e select */
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
-    margin-right: 
+    display: block;
+    margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="date"] {
-width: 10%;
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ccc;
-border-radius: 3px;
-}
-
+input[type="date"],
 select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width: 200px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px 22px;
-    background-color: #004b11;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
@@ -61,5 +45,5 @@ button {
 }
 
 button:hover {
-    background-color: #006dfc;
+    background-color: #218838;
 }
