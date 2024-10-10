@@ -18,3 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define o destino do link dinamicamente
     link.href = 'operacao.html'; // Substitua pelo URL da página desejada
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const link = document.getElementById('loginbt');
+
+    // Define o destino do link dinamicamente
+    link.href = 'login.html'; // Substitua pelo URL da página desejada
+});
