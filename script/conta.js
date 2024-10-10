@@ -63,45 +63,43 @@ function consultar() {
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
+  headers.append('Access-Control-Allow-Origin', '*');
 
-  fetch(`http://localhost:8080/conta/` ,{
+  fetch( 'http://127.0.0.1:8080/conta/findByNome' ,{
 
-    method: "GET",
+    method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ nome: nome_conta }),
+    body: JSON.stringify({ nome: nome_conta}),
 
     headers: headers
 
     //Aqui inicia função then
   }).then(response => {
 
-    if(response.ok) {
-
-
-
-      //Esta linha imprime a mensagem no concole
-      console.log('Foi no servidor e voltou');
-
-      //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso2.html'    
+    if (response.ok) {
+      return response.text(); // Usamos text() para lidar com retorno direto (não é JSON)
     } else {
-      //Esta linha imprime a mensagem no console
-      console.log('Aconteceu algo que não foi possivel salvar');
-
-      //Esta linha imprime a mensagem de erro
-      throw new Error('Erro ao tentar salvar');
+      console.error('Erro na resposta da API');
+      throw new Error('Erro ao tentar buscar a conta');
     }
-
   })
-  //Aqui será executado caso a then não seja chamado
-  .catch(error => console.error('Erro!:', error));
-   
+  .then(id_conta => {
+    console.log("ID da conta recebida:", id_conta); // Aqui o id é diretamente o retorno
 
+    if (id_conta) {
+      localStorage.setItem('id_conta', id_conta);
+      alert("item achado com sucesso! agora é possivel alterar ou deletar a conta selecionada ");
+    } else {
+      console.error("ID não encontrado na resposta");
+    }
+  })
+  .catch(error => {
+    console.error("Erro capturado no catch:", error);
+  });
 }
 
 function alterar() {
@@ -156,7 +154,6 @@ function alterar() {
   })
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error('Erro!:', error));
-   
 
 }
 
@@ -219,4 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function goBack() {
   window.history.back();
+  
+  localStorage.clear();
 }

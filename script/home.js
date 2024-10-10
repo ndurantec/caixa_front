@@ -20,8 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
     const link = document.getElementById('loginbt');
 
     // Define o destino do link dinamicamente
     link.href = 'login.html'; // Substitua pelo URL da página desejada
 });
+=======
+    const link = document.getElementById('relatoriobt');
+
+    // Define o destino do link dinamicamente
+    link.href = 'relatorios.html'; // Substitua pelo URL da página desejada
+});
+>>>>>>> eec69d9ccb5fe7612d7ab01a0229ff5d0eb589b6
