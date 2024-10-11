@@ -13,20 +13,21 @@ body {
   }
 
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
     background: linear-gradient(#00428d,#047e00);
     color: white;
-    position: relative; /* Para o uso de flexbox e centralização */
+    /* Para o uso de flexbox e centralização */
+    /* position: relative;  */
+    /*justify-content: center;*/ 
+    /* align-items: center; */
 }
   
   /* Estilos do formulário de filtro */
   form {
-    max-width: 600px;
+    max-width: 6000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
@@ -38,12 +39,20 @@ body {
     }
   }
   
-  label {
-    display: block;
+   .escrita {
+    display: flex;
     margin-bottom: 10px;
     font-weight: bold;
-  }
-  
+    align-items: center;
+  } 
+
+   .parte-cima {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  } 
+
   h1 {
     text-align: center;
     margin-top: 50px;
@@ -55,18 +64,37 @@ body {
     font-weight: bold;
     font-size: 25px;
   }
-  
+
+  .data-i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .data-f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .c-operacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Estilo dos campos de texto */
-  input[type="text"],
-    input[type="date"] {
+.combos {
     display: block;
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width: auto;
+    padding: 0 100px;
+    margin-top: 8px;
+    margin-bottom: 50px;
     }
 
+    input[type="date"] {
+      width: auto; /* Ajuste para o tamanho desejado */
+      padding: 10px; /* Adiciona espaço interno */
+  }
+    
   select{ 
     width:200px; 
     height:50px; 
