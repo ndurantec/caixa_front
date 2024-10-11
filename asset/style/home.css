@@ -52,6 +52,18 @@ body {
     transition: color 0.3s ease; /* Suaviza a transição da cor */
 }
 
+#somaValores {
+    color: rgb(255, 230, 0); /* Cor padrão dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Suaviza a transição da cor */
+}
+
+#somaValores:hover {
+    color: rgb(0, 225, 255); /* Cor padrão dos links */
+    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
+}
+
 .nav ul li a:hover {
     color: rgb(0, 201, 27); /* Cor dos links quando o mouse está sobre eles */
     text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */

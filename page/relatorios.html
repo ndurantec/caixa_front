@@ -11,10 +11,9 @@
 		<div class="back-button" id="contabt" onclick="goBack()">
 			&#8592; Voltar
 		</div>
-		<h1>Relatório de Fluxo</h1>
-	
-		<!-- Filtro de pesquisa -->
-		<form id="form-relatorio">
+		<header class="header">
+			<h1>Relatório de Fluxo</h1>
+			
 			<label for="data_inicio">Data Início:</label>
 			<input type="date" id="data_inicio" name="data_inicio" required>
 	
@@ -30,8 +29,9 @@
 			<br><br><br><br>
 	
 			<button type="submit">Gerar Relatório</button>
-		</form>
-
+			<button id = "generate-pdf" onclick="gerarPDF()">Gerar PDF</button>
+		</header>
+		<div id="corpo">
 			<!-- Total de valores -->
 		<h3>Total: <span id="total">0</span></h3>
 
@@ -41,8 +41,10 @@
 			<thead>
 				<tr>
 					<th>Data</th>
-					<th>Operação</th>
-					<th>Valor</th>
+					<th>Conta</th>
+					<th>QUT</th>
+					<th>Entrada</th>
+					<th>Saída</th>
 				</tr>
 			</thead>
 			<tbody id="relatorio" class="relatorio">
@@ -50,9 +52,12 @@
 			</tbody>
 		</table>
 	
-		
-	
-		<script src="../script/relatorio.js">
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" 
+			integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" 
+			crossorigin="anonymous" referrerpolicy="no-referrer">
+		</script>
+		<script src="../script/relatorio.js" defer>
 		</script>
 	
 	</body>

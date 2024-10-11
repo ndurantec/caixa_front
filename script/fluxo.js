@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   carregarComboConta();
   carregarComboOperacao();
-  
+  definirNegativo()
 });
 
 function salvar() {
@@ -14,7 +14,7 @@ function salvar() {
   console.log(data_fluxo)
   console.log(valor_fluxo)
   console.log(descricao_fluxo)
- 
+  
   // Cabeçalho não visivel para o usuario
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
@@ -212,6 +212,21 @@ fetch(`http://localhost:8080/fluxo/${ID}` ,{
   .catch(error => console.error('Erro!:', error));
    
 
+}
+function definirNegativo(){
+  const operacao = document.getElementById('Operacoes').value;
+  if(operacao == 2){
+    // Função para adicionar o "-" no valor quando necessário
+    document.getElementById('valor_fluxo').addEventListener('input', function (e) {
+      let valor = e.target.value;
+
+      // Verifica se o valor não começa com "-" e adiciona se necessário
+      if (valor !== '' && !valor.startsWith('-')) {
+          e.target.value = '-' + valor;
+      }
+    });
+  
+  }
 }
 
 function carregarComboConta() {

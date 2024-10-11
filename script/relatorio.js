@@ -1,3 +1,21 @@
+const btnGenerate = document.querySelector("#generate-pdf")
+function gerarPDF(){
+  
+  //conteudo do PDF
+  const tabela_resultado = document.querySelector("#corpo")
+
+  // COnfiguração do arquivo final do PDF
+  const options = {
+      Margin: [10, 10, 10, 10],
+      filename: "relatorio.pdf",
+      html2canvas:{scale: 2},
+      jsPDF: {unit:"mm", format: "a4", orientation: "portrait"}
+  }
+
+  // GErar e baixar o PDF
+  html2pdf().set(options).from(tabela_resultado).save();
+}
+
 document.getElementById('form-relatorio').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar o reload da página
 
@@ -100,3 +118,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     localStorage.clear();
   }
+
+
