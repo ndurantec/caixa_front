@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cabeçalho de Relatório</title>
-        <link rel="stylesheet" href="../asset/style/relatoriomdf.css">
-    </head>
-    <body>
-        
-    </body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Relatório de Fluxo</title>
+		<link rel="icon" href="../asset/image/logo.png" type="image/x-icon">
+		<link rel="stylesheet" href="../asset/style/relatorio.css">
+	</head>
+	<body>
+		<div class="back-button" id="contabt" onclick="goBack()">
+			&#8592; Voltar
+		</div>
+		<header class="header">
+			<h2>Relatório de Fluxo</h1>
+			
+			<div class="parte-cima">
+
+				<div class="escrita">
+					<div class="data-i">
+						<label for="data_inicio">Data Início:</label>
+					</div>
+					<div class="data-f">
+						<label for="data_fim">Data Fim:</label>
+					</div>
+					<div class="c-operacao">
+						<label for="operacao">Operação:</label>
+					</div>
+				</div>
+				
+			</div>	
+			
+			
+			<div class="parte-baixo">
+				<div class="combos">
+					<input type="date" id="data_inicio" name="data_inicio" required>
+					<input type="date" id="data_fim" name="data_fim" required>
+					<select id="operacao" name="operacao" required>
+						<option value="">Selecione a operação</option>
+						<option value="entrada">Entrada</option>
+						<option value="saida">Saída</option>
+					</select>
+				</div>
+				<button type="submit">Gerar Relatório</button>
+				<button id = "generate-pdf" onclick="gerarPDF()">Gerar PDF</button>
+
+
+			</div>
+
+
+
+
+
+
+		</header>
+		<div id="corpo">
+	<form>
+			<!-- Total de valores -->
+		<h3>Total: <span id="total">0</span></h3>
+
+		<!-- Tabela de resultados -->
+		<h2>Resultados:</h2>
+		<table id="tabela-relatorio" class="tabela-relatorio">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Conta</th>
+					<th>QUT</th>
+					<th>Entrada</th>
+					<th>Saída</th>
+				</tr>
+			</thead>
+			<tbody id="relatorio" class="relatorio">
+				<!-- Os registros serão adicionados dinamicamente aqui -->
+			</tbody>
+		</table>
+	
+		</div>
+	</form>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" 
+			integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" 
+			crossorigin="anonymous" referrerpolicy="no-referrer">
+		</script>
+		<script src="../script/relatorio.js" defer>
+		</script>
+	
+	</body>
 </html>
