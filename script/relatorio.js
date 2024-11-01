@@ -2,7 +2,7 @@ const btnGenerate = document.querySelector("#generate-pdf")
 function gerarPDF(){
   
   //conteudo do PDF
-  const tabela_resultado = document.querySelector("#corpo")
+  const tabela_resultado = document.querySelector("#tabela-relatorio")
 
   // COnfiguração do arquivo final do PDF
   const options = {
