@@ -2,6 +2,8 @@ function salvar() {
   const operacao = document.getElementById('nome_operacao').value;
   console.log(nome_operacao)
 
+  if(nome_operacao.leght)
+
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
@@ -204,3 +206,4 @@ function goBack() {
   
   localStorage.clear();
 }
+
