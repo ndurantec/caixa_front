@@ -141,8 +141,8 @@ function alterar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso3.html'   
-      alert("alterado com sucesso essa merda") 
+      window.location.href = 'sucesso3.html'   
+      alert("alterado com sucesso") 
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
